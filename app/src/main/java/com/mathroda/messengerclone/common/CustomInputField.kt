@@ -63,6 +63,7 @@ fun CustomInputField(
             textDirection = TextDirection.Content
         ),
         cursorBrush = SolidColor(ChatTheme.colors.primaryAccent),
+        // Hayotga bir marta kelasande
         decorationBox = { innerTextField -> decorationBox(innerTextField) },
         maxLines = maxLines,
         singleLine = maxLines == 1,
@@ -70,11 +71,6 @@ fun CustomInputField(
     )
 }
 
-/**
- * Check if the [TextFieldValue] state represents a UI with the cursor at the end of the input.
- *
- * @return True if the cursor is at the end of the input.
- */
 private fun TextFieldValue.isCursorAtTheEnd(): Boolean {
     val textLength = text.length
     val selectionStart = selection.start
