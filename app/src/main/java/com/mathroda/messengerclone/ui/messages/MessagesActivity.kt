@@ -125,6 +125,8 @@ class MessagesActivity : BaseConnectedActivity() {
         }
         BackHandler(enabled = true, onBack = backAction)
 
+
+        //Message UI
         Box(modifier = Modifier.fillMaxSize()) {
             Scaffold(
                 modifier = Modifier.fillMaxSize(),
@@ -190,6 +192,8 @@ class MessagesActivity : BaseConnectedActivity() {
 
             val selectedMessage = selectedMessageState?.message ?: Message()
             val ownCapabilities = selectedMessageState?.ownCapabilities ?: setOf()
+
+            //newMessage
 
             val newMessageOptions = CustomMessageOptionsState(
                 selectedMessage = selectedMessage,
